@@ -86,7 +86,7 @@ export const current_team_photo = [
     "src": "/photos/members25-26/Ankith Kaushik.jpeg",
     "name": "Ankith Kaushik",
     "post": "TREASURER",
-    "linkedin": "http://linkedin.com/in/ankith-kaushik-222339328",
+    "linkedin": "https://www.linkedin.com/in/ankith-kaushik-222339328",
     "gmail": "ankithkaushik2005@gmail.com"
   },
   {
@@ -132,7 +132,7 @@ export const current_team_photo = [
     "src": "/photos/members25-26/Pallavi S.jpg",
     "name": "Pallavi S",
     "post": "STUDENT CO-ORDINATOR",
-    "linkedin": "linkedin.com/in/pallavis21",
+    "linkedin": "https://www.linkedin.com/in/pallavis21",
     "gmail": "pallavis2125@gmail.com"
   },
   {
@@ -213,7 +213,7 @@ export const current_team_photo = [
     "src": "/photos/members25-26/Akshay.JPG",
     "name": "Akshay Kumar",
     "post": "SENIOR TECHNICAL CO-ORDINATOR",
-    "linkedin": "www.linkedin.com/in/akshay-kumar-9484592a1",
+    "linkedin": "https://www.linkedin.com/in/akshay-kumar-9484592a1",
     "gmail": "akshayyk210@gmail.com"
   },
   {
@@ -279,7 +279,7 @@ export const current_team_photo = [
     "src": "/photos/members25-26/Pramathi H.B.jpg",
     "name": "Pramathi H.B",
     "post": "SECRETARY",
-    "linkedin": "www.linkedin.com/in/pramathi-h-b-808487292",
+    "linkedin": "https://www.linkedin.com/in/pramathi-h-b-808487292",
     "gmail": "pramathi1805@gmail.com"
   },
   {
@@ -288,7 +288,7 @@ export const current_team_photo = [
     "src": "/photos/members25-26/harshith ar.JPG",
     "name": "Harshith A R",
     "post": "JOINT SECRETARY",
-    "linkedin": "www.linkedin.com/in/harshi76",
+    "linkedin": "https://www.linkedin.com/in/harshi76",
     "gmail": "arharshi9535@gmail.com"
   },
   {
