@@ -1,45 +1,202 @@
+/* Executive Committee Section */
+.executive_committe {
+  margin-top: 10%;
+  text-align: center; /* Center the title */
+}
+
+/* Main heading styling */
+.heading {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: #2085de;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin: 5% auto 2% auto;
+  padding-top: 3%;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(32, 133, 222, 0.4);
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.heading:hover {
+  color: #4ec4f7;
+}
+
+/* Paragraph styling */
+.paragraph {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: #b8c0e7;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 2% auto;
+  padding: 0 5%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.05rem;
+  transition: color 0.3s ease;
+}
+
+.paragraph:hover {
+  color: #c9d1f8;
+}
+
+/* Hr styling */
+.hr-1 {
+  width: 10%;
+  margin: 1% auto 2% auto;
+  border: 2px solid #2085de;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+/* Small heading for sections */
+.small_heading {
+  font-family: 'Montserrat', sans-serif;
+  color: #a994ee;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  margin: 3% auto;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(173, 156, 255, 0.5);
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.executive_committe h2:hover {
+  color: #ceb9f9;
+}
+
+.small_heading:hover {
+  color: #ceb9f9;
+}
+
 .executive_committe_card {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  column-gap: 0%;
-  row-gap: 2%;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 2%; /* Increased gap for better spacing */
+  row-gap: 3%;
   justify-items: center;
   padding: 5% 10%;
 }
 
-.executive_committe{
-  margin-top: 10%;
-  
-} 
-
-.accordion {
-    background-color: #3e4853;
-    color: #b8c0e7;
-    cursor: pointer;
-    padding:0.5rem 1.5rem;
-    width: 80%;
-    text-align: left;
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    transition: 0.4s;
-    display: flex;
-    justify-content: space-between;
-    max-width: 80vw;
-    margin: 5% 10% 1%;
-    
-  }
-  
-.hide
-{
-  display: none;
+.executive_committe_card .card { /* Add a class for individual cards */
+  background: rgba(255, 255, 255, 0.08); /* Subtle card background */
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 100%; /* Ensure cards fill their grid space */
 }
 
-@media screen and (max-width:768px) {
-  .executive_committe_card{
-    display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+.executive_committe_card .card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.executive_committe_card .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.executive_committe_card .card h3 {
+  font-family: 'Raleway', sans-serif;
+  color: #0095DA;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.executive_committe_card .card h3:hover {
+  color: #4ec4f7;
+}
+
+.executive_committe_card .card p {
+  font-family: 'Open Sans', sans-serif;
+  color: #b8c0e7;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+/* Accordion Styling */
+.accordion {
+  background-color: #3e4853;
+  color: #b8c0e7;
+  cursor: pointer;
+  padding: 1rem 2rem; /* Increased padding */
+  width: 80%;
+  text-align: left;
+  border: none;
+  outline: none;
+  font-size: 1.3rem;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  max-width: 80vw;
+  margin: 3% 10% 1%; /* Adjusted margins */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.accordion:hover {
+  background-color: #4a5663;
+  border-radius: 12px;
+}
+
+.accordion::after { /* Arrow icon */
+  content: '\002B';
+  font-size: 1.5rem;
+  color: #a994ee;
+  transition: transform 0.3s ease;
+}
+
+.accordion.active::after {
+  content: '\002D';
+  transform: rotate(180deg);
+}
+
+.hide {
+  display: none;
+  background-color: #353f4a;
+  padding: 1rem 2rem;
+  width: 80%;
+  margin: 0 10% 3%;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-family: 'Open Sans', sans-serif;
+  color: #b8c0e7;
+  line-height: 1.6rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  /* ensure content doesn't hide behind fixed navbar on mobile */
+  .heading {
+    padding-top: 100px;
+  }
+
+  .executive_committe_card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .executive_committe_card .card {
+      width: 90%; /* Responsive card width */
+      margin: 1rem 0;
+  }
+
+  .accordion, .hide {
+      width: 90%;
+      margin-left: 5%;
   }
 }

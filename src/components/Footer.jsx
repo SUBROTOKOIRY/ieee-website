@@ -16,7 +16,7 @@ return (
           <br />
           Mysuru, 570006
           <br />
-          Phone: +(91) 7829478991
+          Phone: +(91) 7795317819
           <br />
           Email: ieeesjce2019@gmail.com
         </p>
@@ -31,6 +31,7 @@ return (
           IEEE XploreDigital Library
         </a>
         <a href="https://eds.ieee.org/">IEEE EDS</a>
+        <a href="https://signalprocessingsociety.org/">IEEE SPS</a>
         <a href="https://ieeebangalore.org/">IEEE-Bangalore section</a>
         <a href="http://www.ieee-ras.org/">IEEE RAS</a>
       </div>
@@ -69,7 +70,7 @@ return (
     </div>
     <div className="footer">
       <p>
-        Copyrights © 2023 IEEE-SJCE | Developed by the WBD Board at IEEE-SJCE
+        Copyrights © 2024 IEEE-SJCE | Developed by the WBD Board at IEEE-SJCE
       </p>
       {/* <!-- <hr> --> */}
     </div>

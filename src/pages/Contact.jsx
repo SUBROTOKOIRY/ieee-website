@@ -80,6 +80,7 @@ function Contact(){
           {/* <a href="mailto:ieeesjce2019@gmail.com"></a> */}
           <div class="box">
             <iframe
+              title="email animation"
               style={{ border: 'none', height: '100px' }}
               src="https://lottie.host/?file=23ecd9fa-1719-42c7-bcef-b021c5e3c509/eHhdi9dHx9.json"
             ></iframe>
@@ -93,18 +94,20 @@ function Contact(){
           {/* <a href="tel:+918762361434"> */}
           <div class="box">
             <iframe
+              title="phone animation"
               style={{ border: 'none', height: '100px' }}
               src="https://lottie.host/?file=94896b6f-5561-481d-8924-ed335c23637b/eAdCe077z7.json"
             ></iframe>
 
             <p class="service_para">Reach us on</p>
             <a className="service_link" href="tel:+918762361434">
-              (+91) 7829478991
+              (+91) 7795317819
             </a>
           </div>
 
           <div class="box">
             <iframe
+              title="instagram animation"
               style={{ border: 'none', height: '100px' }}
               src="https://lottie.host/?file=1341d09a-b282-4dc2-8685-e26dc2784943/Nu0yAutyXc.json"
             ></iframe>
@@ -115,6 +118,22 @@ function Contact(){
               href="https://www.instagram.com/ieee_sjce/"
             >
               @ieee_sjce
+            </a>
+          </div>
+
+          <div class="box" style={{width:'300px'}}>
+            <img
+              src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000"
+              alt="LinkedIn logo"
+              style={{ height: '100px', width: 'auto' }}
+            />
+
+            <p class="service_para">Connect with us on LinkedIn</p>
+            <a
+              className="service_link"
+              href="https://www.linkedin.com/company/ieee-sjce/"
+            >
+              IEEE-SJCE
             </a>
           </div>
 

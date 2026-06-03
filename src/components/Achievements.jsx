@@ -39,6 +39,7 @@ function Achievements() {
       <hr className="hr-1" />
       <div className="achievements_container">
         <iframe
+          title="achievement animation"
           className="award_img"
           src="https://lottie.host/?file=f399cd9d-eb80-432b-b0da-04e11035a8e4/RKEVGpvACW.json"
         ></iframe>

@@ -30,6 +30,7 @@ function VideoThumbnail() {
               <a
                 className="vimeo-popup"
                 href="https://www.youtube.com/watch?v=qwPHHn1LT2Q"
+                aria-label="Watch IEEE EDS TALK video"
               ></a>
             </div>
           </div>
@@ -51,6 +52,7 @@ function VideoThumbnail() {
               <a
                 className="vimeo-popup"
                 href="https://www.youtube.com/watch?v=vSXHOA38Yho"
+                aria-label="Watch Talk on Research in EECS video"
               ></a>
             </div>
           </div>
@@ -72,6 +74,7 @@ function VideoThumbnail() {
               <a
                 className="vimeo-popup"
                 href="https://www.youtube.com/watch?v=IlxzdaT5Nno"
+                aria-label="Watch Alumni Podcast video"
               ></a>
             </div>
           </div>
@@ -89,6 +92,7 @@ function VideoThumbnail() {
               <a
                 className="vimeo-popup"
                 href="https://bit.ly/Kalpana_Chawla_Memorial_Lecture_2023"
+                aria-label="Watch Kalpana Chawla Memorial Lecture video"
               ></a>
             </div>
           </div>

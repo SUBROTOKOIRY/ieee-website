@@ -1,16 +1,16 @@
 import React from 'react'
 import '../css/Banner.css'
 import { HashLink } from 'react-router-hash-link'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 function Banner() {
   return (
     <div>
       <div className="banner-div overlay">
-        <img
-          className="banner"
-          src="/photos/gallery/sl1-mobile.jpg"
-          alt="banner"
-        />
+      <img
+  className="banner"
+  src= "/photos/gallery/caraousel/IMG_5944.jpg"
+  alt="IEEE SJCE team"
+/>
         <h3 className="welcome_title">
           <span>Welcome To</span>
         </h3>

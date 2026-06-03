@@ -1,132 +1,199 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-background-color: #0d1717;
-width: 100%;
-height: 100vh;
+/* Modern Gallery Component - Core Variables */
+:root {
+  --gallery-z-index: 999;
+  --gallery-fallback-bg: rgba(13, 23, 23, 0.95);
+  --gallery-accent: #0095da;
+  --gallery-animation-duration: 0.3s;
+  --gallery-border-radius: 1rem;
+  --gallery-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-.heading {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 1%;
-    font-family: 'Fira Sans', sans-serif;
-    color: #0095da;
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-     text-align: center;
-    position: relative;
-    margin-top: 8%;
-    margin-bottom: 2%;
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-.small_heading{
-  display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2%;
-    font-family: 'Fira Sans', sans-serif;
-    color: #0095da;
-    font-size: 2rem;
-    font-weight: 400;
-    letter-spacing: 0.05rem;
-    text-align: center;
-    position: relative;
-    font-weight: 400;
-}
- .hr-1 {
-    border: 0;
-    height: 1px;
-    margin-bottom: 5%;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0),
-      rgba(113, 227, 242, 0.75),
-      rgba(0, 0, 0, 0)
-    );
-  }
-  .paragraph {
-      font-size: 1.5rem;
-      font-weight: 500;
-      line-height: 1.5;
-      color: #b8c0e7;
-      margin-bottom: 1.5rem;
-      margin-top: 1.5rem;
-      text-align: center;
-      padding: 0px 5%;
-      font-family: 'Montserrat', sans-serif;
-    }
+/* Gallery Container - Modern Approach */
+.gallery-container {
+  position: relative;
+  isolation: isolate;
+  min-height: 60vh;
+  margin: 2rem 0;
+  transform-style: preserve-3d;
+  width: 100%;
+  display: grid;
+  gap: 1rem;
   
-  .btn {
-    width: 130px;
-    /* height: auto; */
-    height: 15%;
-    /* max-height: auto; */
-    font-family: 'Anek Telugu', sans-serif;
-    font-weight: 600;
-    font-size: medium;
-    text-transform: uppercase;
-    padding: 8px;
-    /* margin-bottom: 20px; */
-    color: white;
-    background: #4372e9;
-    /* border: 1px solid #ffd60a; */
-    border-radius: 10px;
-    /* box-shadow: 0px 0px 10px #0077b6; */
-    border: none;
-    margin: 1rem auto;
-  }
-
-  .btn:hover,
-  .btn:focus,
-  .btn:active {
-    transition: 0.5s;
-    border: none;
-    text-transform: uppercase;
-    background: #0095da;
-    color: white; 
-    transform: translateY(-0.2em);
-    cursor: pointer;
-  }
-
-  @media  screen and (max-width: 750px) {
-    .heading{
-      font-size: 2rem;
-      margin-top: 20%;
-      margin-bottom: 3%;
-      letter-spacing: 0.05rem;
-    }
-    .small_heading{
-      font-size: 1.4rem;
-      margin-top: 15%;
-      margin-bottom: 10%;
-      text-decoration: underline;
-      letter-spacing: 0.02rem;
-    }
-    .paragraph{
-      font-size: 1rem;
-      margin-top: 5%;
-      margin-bottom: 5%;
-    }
-    .btn{
-      font-size: small;
-    }
-  }
-
+  /* Force hardware acceleration */
+  backface-visibility: hidden;
+  will-change: transform;
   
+  /* Modern Animation */
+  animation: galleryEntry 0.5s cubic-bezier(0.2, 0.85, 0.4, 1) both;
+}
+
+/* Tile Improvements */
+.ReactGridGallery_tile {
+  border-radius: var(--gallery-border-radius);
+  overflow: hidden;
+  box-shadow: var(--gallery-shadow);
+  position: relative;
+  touch-action: manipulation;
+  
+  /* Performance Optimizations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  
+  /* Modern Transitions */
+  transition: transform var(--gallery-animation-duration) cubic-bezier(0.2, 0.85, 0.4, 1),
+              box-shadow var(--gallery-animation-duration) cubic-bezier(0.2, 0.85, 0.4, 1);
+}
+
+/* Enhanced Image Handling */
+.ReactGridGallery_tile img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  
+  /* Modern Image Transitions */
+  transition: transform var(--gallery-animation-duration) cubic-bezier(0.2, 0.85, 0.4, 1),
+              filter var(--gallery-animation-duration) cubic-bezier(0.2, 0.85, 0.4, 1);
+}
+
+/* Hover Effects with Modern Approach */
+.ReactGridGallery_tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--gallery-shadow), 0 12px 24px rgba(0, 0, 0, 0.18);
+}
+
+.ReactGridGallery_tile:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.1) contrast(1.05) saturate(1.02);
+}
+
+/* Loading State - Modern Spinner */
+.gallery-loading {
+  position: relative;
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+}
+
+.gallery-loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  border-top-color: var(--gallery-accent);
+  border-radius: 50%;
+  animation: gallery-spin 0.8s cubic-bezier(0.2, 0.85, 0.4, 1) infinite;
+}
+
+/* Error State - Modern Design */
+.gallery-error {
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: var(--gallery-fallback-bg);
+  border: 2px solid rgba(0, 149, 218, 0.2);
+  border-radius: var(--gallery-border-radius);
+  color: white;
+  font-weight: 500;
+}
+
+/* Modern Animations */
+@keyframes galleryEntry {
+  from { 
+    opacity: 0;
+    transform: scale(0.98) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes gallery-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Focus Styles for Accessibility */
+.ReactGridGallery_tile:focus-within {
+  outline: 2px solid var(--gallery-accent);
+  outline-offset: 2px;
+}
+
+/* Enhanced Responsive Design */
+@media screen and (max-width: 1200px) {
+  .gallery-container {
+    gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .gallery-container {
+    gap: 0.5rem;
+  }
+  
+  .ReactGridGallery_tile {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    border-radius: calc(var(--gallery-border-radius) * 0.75);
+  }
+}
+
+/* Prefers Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-container,
+  .ReactGridGallery_tile,
+  .ReactGridGallery_tile img {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .ReactGridGallery_tile:hover {
+    transform: none;
+  }
+  
+  .gallery-loading::after {
+    animation: none !important;
+    border: 3px solid var(--gallery-accent);
+  }
+}
+
+/* Print Optimization */
+@media print {
+  .gallery-container {
+    display: block;
+    animation: none;
+  }
+  
+  .ReactGridGallery_tile {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    box-shadow: none;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gallery-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  }
+  
+  .ReactGridGallery_tile {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Support for custom dark mode toggle class */
+.dark-mode .ReactGridGallery_tile {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Z-index management */
+.gallery-modal-open {
+  z-index: var(--gallery-z-index);
+}
+
+/* Positioning fixes */
+.ReactGridGallery_tile-viewport {
+  position: relative !important;
+}

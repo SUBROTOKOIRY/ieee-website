@@ -40,7 +40,7 @@ function Stand_for() {
         <div className="works">
           <ul>
             {details.map((detail) => {
-              return detail.id != '1' ? (
+              return detail.id !== '1' ? (
                 <li onClick={handleClick} value={detail.id} key={detail.id}>
                   <p className="work">{detail.work_name}</p>
                 </li>

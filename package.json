@@ -1,12 +1,13 @@
 {
   "name": "ieee-website",
-  "homepage": "https://www.ieeesjce.com/",
+  "homepage": "https://www.ieeesjce.org/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "ajv": "^6.12.6",
+    "ajv-keywords": "^3.5.2",
     "animejs": "^3.2.2",
     "aos": "^2.3.4",
     "axios": "^1.6.2",
@@ -15,15 +16,21 @@
     "react-bootstrap": "^2.9.0",
     "react-confetti": "^6.1.0",
     "react-dom": "^18.2.0",
-    "react-images": "^1.2.0-beta.7",
     "react-photo-gallery": "^8.0.0",
+    "react-photo-view": "^1.2.7",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.15.0",
     "react-router-hash-link": "^2.4.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-vertical-timeline-component": "^3.6.0",
     "styled-components": "^6.0.7",
     "web-vitals": "^2.1.4"
+  },
+  "overrides": {
+    "react-photo-gallery": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,8 +55,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "html-webpack-plugin": "^5.5.3"
   }
 }

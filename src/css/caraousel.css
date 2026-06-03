@@ -1,34 +1,46 @@
-.carousel-root{
+.carousel-root {
     height: 50%;
     width: 60%;
     margin: 5% auto;
-}
-
-.carousel .slide img{
+  }
+  
+  .carousel .slide img {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     border-radius: 15px;
-    box-shadow: 0 0 8px 8px rgb(61, 68, 71) inset;
-}
-.carousel .control-dots .dot{
-    background-color:#a7c5d3;
-}
-
-.carousel.carousel-slider .control-arrow{
-    background-color: rgb(124, 170, 219);
+    box-shadow: 0 0 8px 8px rgba(61, 68, 71, 0.8) inset;
+  }
+  
+  .carousel .control-dots .dot {
+    background-color: #a7c5d3;
+  }
+  
+  .carousel.carousel-slider .control-arrow {
+    background-color: rgba(124, 170, 219, 0.8);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     padding: 10px;
-    box-shadow: 0 0 8px 8px rgb(88, 94, 96) inset;
+    box-shadow: 0 0 8px 8px rgba(88, 94, 96, 0.6) inset;
     top: 40%;
-}
-
-@media screen and (max-width: 750px) {
-    .carousel-root{
-    height: 100%;
-    width: 100%;
-    margin: 15% auto;
-}
-}
+    transition: all 0.3s ease;
+  }
+  
+  .carousel.carousel-slider .control-arrow:hover {
+    background-color: rgba(124, 170, 219, 1);
+  }
+  
+  @media screen and (max-width: 750px) {
+    .carousel-root {
+      height: auto;
+      width: 90%;
+      margin: 15% auto;
+    }
+    
+    .carousel.carousel-slider .control-arrow {
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+    }
+  }

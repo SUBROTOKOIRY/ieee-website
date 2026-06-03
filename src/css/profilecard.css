@@ -1,102 +1,245 @@
-.our-team{
+.our-team {
     text-align: center;
-}
-.our-team .team-image{
+    position: relative;
+    padding: 30px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+    transform: translateY(0);
+  }
+  
+  .our-team:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(197, 210, 223, 0.4);
+  }
+  
+  /* Image and border effects */
+  .our-team .team-image {
     width: 200px;
-    height:200px;
+    height: 200px;
     border-radius: 50%;
     border: 5px solid #bedff9;
     position: relative;
     margin: auto;
-    transition: all 0.5s ease 0s;
-}
-.our-team:hover .team-image{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(78, 162, 241, 0.15);
+    z-index: 1;
+  }
+  
+  .our-team:hover .team-image {
     border-color: #39bcf0;
-}
-.our-team .team-image img{
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(57, 188, 240, 0.25);
+  }
+  
+  .our-team .team-image::before {
+    display: none;
+  }
+  
+  .our-team .team-image img {
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
-}
-.our-team .social{
+    transition: filter 0.3s ease;
+    filter: saturate(0.95) brightness(1);
+  }
+  
+  .our-team:hover .team-image img {
+    filter: saturate(1) brightness(1.02);
+  }
+  
+  /* Social icons styling */
+  .our-team .social {
     margin: 0;
     padding: 0;
     list-style: none;
-    width: 100%;
     position: absolute;
     top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
     opacity: 0;
-    transform: scale(0);
-    transition: all 0.5s ease 0s;
-}
-.our-team:hover .social{
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .our-team:hover .social {
     opacity: 1;
-    transform: scale(1);
-    animation: 0.5s ease 0s normal 1 bounce;
-}
-.our-team .social li{
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .our-team .social li {
     display: inline-block;
     border-radius: 50%;
-}
-.our-team .social li:first-child{
-    margin-left: -20px;
-    float: left;
-}
-.our-team .social li:last-child{
-    margin-right: -20px;
-    float: right;
-}
-.our-team .social li a{
-    display: block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
+    transition: all 0.2s ease;
+    transform: translateY(0);
+  }
+  
+  .our-team .social li:hover {
+    transform: translateY(-2px);
+  }
+  
+  .our-team .social li:first-child {
+    margin-left: 0;
+    float: none;
+  }
+  
+  .our-team .social li:last-child {
+    margin-right: 0;
+    float: none;
+  }
+  
+  .our-team .social li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #ffffff;
-    font-size: 20px;
     color: #39bcf0;
-    border: 3px solid #39bcf0;
-}
-
-.our-team .team-content{
-    padding: 10px 50px;
-}
-.our-team .title{
+    border: 2px solid #39bcf0;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .our-team .social li a svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .our-team .social li a:hover {
+    background-color: #39bcf0;
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(57, 188, 240, 0.3);
+  }
+  
+  .our-team .social li a::before {
+    display: none;
+  }
+  
+  /* Content styling */
+  .our-team .team-content {
+    padding: 25px 20px 10px;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .our-team:hover .team-content {
+    transform: none;
+  }
+  
+  .our-team .title {
     font-size: 24px;
     color: #4ea2f1;
-    margin: 0 0 10px 0;
-}
-.our-team .description{
+    margin: 15px 0 8px 0;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+    display: block;
+    text-align: center;
+  }
+  
+  .our-team:hover .title {
+    color: #39bcf0;
+  }
+  
+  .our-team .title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #39bcf0;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .our-team:hover .title::after {
+    width: 40px;
+  }
+  
+  .our-team .description {
     font-size: 14px;
-    color:#b8c0e7;
-    line-height: 25px;
-    margin: 0;
-}
-@keyframes bounce{
-    0%{
-        opacity:0;
-        -webkit-transform:scale(.3);
-        transform:scale(.3)
+    color: #b8c0e7;
+    line-height: 1.6;
+    margin: 12px 0 0 0;
+    padding: 0 10px;
+    transition: color 0.3s ease;
+    text-align: center;
+  }
+  
+  .our-team:hover .description {
+    color: #c9d1f8;
+  }
+  
+  /* Removed complex animations */
+  @keyframes bounce {
+    
+  }
+  
+  @keyframes float {
+    
+  }
+  
+  /* Responsive adjustments */
+  @media screen and (max-width: 990px) {
+    .our-team {
+      margin-bottom: 40px;
     }
-    50%{
-        opacity:1;
-         -webkit-transform:scale(1.05);
-         transform:scale(1.05)
+    
+    .our-team .team-image,
+    .our-team .team-image img {
+      width: 180px;
+      height: 180px;
     }
-    70%{
-        -webkit-transform:scale(.9);
-        transform:scale(.9)
+    
+    .our-team .social li a {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
     }
-    100%{
-        opacity:1;
-        -webkit-transform:scale(1);
-        transform:scale(1)
+  }
+  
+  @media screen and (max-width: 576px) {
+    .our-team .team-image,
+    .our-team .team-image img {
+      width: 150px;
+      height: 150px;
     }
-}
-@media screen and (max-width: 990px){
-    .our-team{ margin-bottom: 20px; }
-}
-
-/* profile card link */
-/* https://bestjquery.com/tutorial/our-team/demo38/ */
+    
+    .our-team .title {
+      font-size: 20px;
+    }
+  }
+  
+  /* Add staggered entrance animation for multiple team members */
+  .team-container .our-team {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: teamAppear 0.8s forwards;
+  }
+  
+  .team-container .our-team:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .team-container .our-team:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .team-container .our-team:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes teamAppear {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

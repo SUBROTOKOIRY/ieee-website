@@ -1,55 +1,79 @@
-.row{
-    /* display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-content: center; */
+/* Mentors Section */
+.row {
     width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 10%;
-    /* max-width: 842px; */
 }
-.mentors_wrapper{
-    margin:0 7%;
+
+.mentors_wrapper {
+    margin: 0 7%;
+    transition: transform 0.3s ease; /* Smooth transition for wrapper */
 }
-.mentors{
+
+.mentors_wrapper:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.mentors {
     text-align: center;
     margin-bottom: 100px;
     z-index: 1;
     position: relative;
+    transition: transform 0.3s ease; /* Smooth transition for mentor card */
 }
+
+.mentors:hover {
+    transform: scale(1.02); /* Slight scale on hover */
+}
+
 .mentors .pic {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     position: relative;
+    overflow: hidden; /* Ensure content stays within the circle */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: box-shadow 0.3s ease;
 }
-.mentors .pic img{
+
+.mentors:hover .pic {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.mentors .pic img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
-    border: 4px solid  #0095da;
-    overflow:hidden;
+    border: 4px solid #0095da;
     object-fit: cover;
+    transition: border-color 0.3s ease; /* Smooth border color transition */
 }
-.mentors .pic:after{
+
+.mentors:hover .pic img {
+    border-color: #4ec4f7; /* Brighter border color on hover */
+}
+
+.mentors .pic:after {
     content: "";
-    width: 208px;
-    height: 208px;
+    width: 100%; /* Match the image dimensions */
+    height: 100%; /* Match the image dimensions */
     border-radius: 50%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 0.5s ease 0s;
-}
-.mentors:hover .pic:after{ 
-    opacity: 1; 
+    transition: opacity 0.5s ease;
 }
 
-.mentors .social{
+.mentors:hover .pic:after {
+    opacity: 1;
+}
+
+.mentors .social {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -57,65 +81,98 @@
     opacity: 0;
     position: absolute;
     top: 40%;
-    left: 5%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the social icons */
     z-index: 1;
-    transition: all 0.5s ease 0s;
-    /* display: flex;
-    justify-content: space-around; */
+    transition: opacity 0.5s ease;
 }
-.mentors:hover .social{ opacity: 1; }
-.mentors .social li{ display: inline-block; }
-.mentors .social li a{
+
+.mentors:hover .social {
+    opacity: 1;
+}
+
+.mentors .social li {
+    display: inline-block;
+    margin: 0 5px; /* Add spacing between icons */
+}
+
+.mentors .social li a {
     display: block;
     width: 45px;
     height: 45px;
     line-height: 45px;
     border-radius: 50%;
-    border: 1px solid  #0095da;
+    border: 1px solid #0095da;
     font-size: 15px;
-    color:  #fff;
-    margin-right: 10px;
-    transition: all 0.5s ease 0s;   
+    color: #fff;
+    transition: background 0.5s ease, color 0.5s ease;
 }
-.mentors .social li a:hover{
-    background: #0095da;;
+
+.mentors .social li a:hover {
+    background: #0095da;
     color: #000;
 }
-.mentors .mentors-content{
+
+.mentors .mentors-content {
     width: 240px;
     height: 240px;
     border-radius: 50%;
     border: 2px dotted #ddd;
     position: absolute;
     bottom: -70px;
-    left: -15px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the dotted circle */
     z-index: -1;
-    transition: all 0.5s ease 0s;
+    transition: border-color 0.5s ease;
 }
-.mentors:hover .mentors-content{ border: 2px dotted  #0095da; }
-.mentors .mentors-info{
+
+.mentors:hover .mentors-content {
+    border: 2px dotted #0095da;
+}
+
+.mentors .mentors-info {
     width: 100%;
     color: #464646;
     position: absolute;
     bottom: 12px;
     left: 0;
 }
-.mentors .title{
+
+.mentors .title {
     font-size: 1rem;
     font-weight: 600;
     color: #b8c0e7;
     margin: 0 0 5px 0;
-    transition: all 0.5s ease 0s;
-}
-.mentors:hover .title{ color:  #0095da; }
-.mentors .post{
-    display: block;
-    font-size: 12px;
-    color:  #a5b6c458;
+    transition: color 0.5s ease;
 }
 
-@media screen and (max-width:760px) {
-    .mentors_wrapper{
-    margin:2% 5%;
+.mentors:hover .title {
+    color: #0095da;
 }
+
+.mentors .post {
+    display: block;
+    font-size: 12px;
+    color: #a5b6c458;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 760px) {
+    .mentors_wrapper {
+        margin: 2% 5%;
+    }
+
+    .mentors {
+        margin-bottom: 80px; /* Adjusted margin for smaller screens */
+    }
+
+    .mentors .pic {
+        height: 180px;
+        width: 180px;
+    }
+
+    .mentors .mentors-content {
+        width: 220px;
+        height: 220px;
+    }
 }

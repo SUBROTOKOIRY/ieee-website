@@ -8,22 +8,8 @@ function Past_events() {
   const pastEvents = [
     {
       id: 1,
-      date: '20th - 22nd January 2023',
-      title: 'Soldering and Etching Workshop',
-      img: 'photos/events/soldering_&_etching.jpeg',
-      content: `The Electron Devices Society conducted SOLDERING & ETCHING WORKSHOP, one of the flagship events of IEEE-SJCE. A 3-day event that gives students a hands-on experience of Soldering and Etching with theoretical and practical sessions.`,
-    },
-    {
-      id: 2,
-      date: '13th - 15th April 2023',
-      title: 'SQL Bootcamp',
-      img: 'photos/events/sql.jpg',
-      content: `A 3 day online SQL Bootcamp where participants were taught the foundations of Structured Query Language - SQL. Students were tasked to build a solid backend component for the given front end! Learners were pumped up with the confidence to answer questions asked related to SQL during your placements.`,
-    },
-    {
-      id: 3,
-      date: '28th - 30th April 2023',
-      title: 'IOT Workshop',
+      date: '29th - 30th Nov and 1st Dec 2024',
+      title: 'IOT-3.0  Workshop',
       img: 'photos/events/iot_workshop.jpeg',
       content: `A 3-day workshop with a lot of learning and interesting hands-on
               sessions.We will be covering protocols and all the other important
@@ -31,63 +17,54 @@ function Past_events() {
               them using Raspberry Pi and Node MC.`,
     },
     {
+      id: 2,
+      date: '10th - 12th January 2025',
+      title: 'Soldering and Etching Workshop',
+      img: '/photos/events/soldering&etching.jpeg',
+      content: `The Electron Devices Society conducted SOLDERING & ETCHING WORKSHOP, one of the flagship events of IEEE-SJCE. A 3-day event that gives students a hands-on experience of Soldering and Etching with theoretical and practical sessions.`,
+    },
+    {
+      id: 3,
+      date: '11th February 2025',
+      title: 'AI Expert Talk and Ideathon',
+      img: '/photos/events/Screenshot 2025-03-26 212852.png',
+      content: `STRONG - Scientific Research for NextGen GirlGeeks was organized by the MCAA India Chapter, funded by the European Union, and supported by the MCAA-Mednight Project, IEEE Mysore Subsection, and IEEE-SJCE. The event aimed to inspire young women to pursue careers in science and research.`,
+    },
+    {
       id: 4,
-      date: '31st May - 4th June 2023',
-      title: 'Robotics 14',
-      img: 'photos/events/robotics.jpeg',
-      content: `The workshop included basics of microcontrollers,
-              microprocessors,blinking onboard LED, blinking external LED,
-              PWM(breathing LED), pull up and pull down concepts and interrupts
-              all of these concepts were then implemented in building the
-              robots.`,
+      date: '25th October 2025',
+      title: 'Circuitrix',
+      img: '/photos/events/circuitrix_2025.jpg',
+      content: `Our team conducted the event Circuitrix,This hands on session is designed to help the students to explore ,create and simulate both analog and the digital circuits using the powerful circuit simulation tools.`
     },
     {
       id: 5,
-      date: '23rd September 2023',
-      title: 'Prayas',
-      img: 'photos/events/prayas.jpeg',
-      content: `PRAYAS is an outreach program by IEEE-SJCE WIE that provides
-              inequitable education outcomes to underprivileged children. The
-              volunteers visited an Orphanage every week to interact with the
-              students and help them out in their academic activities.`,
+      date: '6th - 7th November 2025',
+      title: 'Snap Circuits',
+      img: '/photos/events/snap_circuit_2025.jpg',
+      content: `The Electron Devices Society conducted the Snap Circuits,it provided a hands-on experience of electronic components and increased curiosity of electronic circuits and their working among freshers. It was an opportunity to gain knowledge and develop circuit building skills. `,
     },
     {
       id: 6,
-      date: '3rd-5th October 2023',
-      title: 'IEEE Envision',
-      img: 'photos/events/ieee_envision.jpg',
-      content: `On IEEE DAY, we celebrated global innovation, technology, and
-              collaboration, driving progress and changing the world together.To
-              celebrate this commitment, IEEE-SJCE has conducted IEEE-Envision,
-              a trio event series. Here is a glimpse of the electrifying events:-
-              Linux Tutelage, Coggle Mindscape, Ad-Vintage.`,
-    },
+      date: '21st - 23rd November 2025',
+      title: 'IOT 4.0',
+      img: '/photos/events/iot_4.0.jpg',
+      content: `The Robotics and Automation Society conducted the IoT 4.0 workshop, providing participants with hands-on exposure to building smart, connected systems and enhancing their understanding of IoT concepts and real-world applications using embedded platforms.`,
+    }, 
     {
       id: 7,
-      date: '3rd-4th November 2023',
-      title: 'Fun-tastic Fiesta & Orientation Day',
-      img: 'photos/events/fun_event.jpg',
-      content: `Fun-tastic Fiesta was a compilation of thrilling array of events
-              where freshers had an opportunity to make new connections,
-              rejuvenate, get together and have fun! Through Orientation day
-              freshers took the opportunity to get to know about IEEE-SJCE and
-              its activities. We also held a placement talk for the freshers.`,
-    },
+      date: '6th December 2025',
+      title: 'Wave Lab',
+      img: '/photos/events/wavelab.jpg',
+      content: `This is the debut event of the SPS Wing. Students utilized the powerful tool, MATLAB, to understand the basics of Signal Processing. The workshop allows the students to explore the world of digital signal processing utilising an industrial standard tool, MATLAB. The students obtain a MATLAB license which will be useful for their future explorations.`,
+    },   
     {
       id: 8,
-      date: '28-29th November 2023',
-      title: 'Snap Circuits',
-      img: 'photos/events/Snap_Circuits.jpg',
-      content: `The first event of Tuxedo tech-fest, Snap circuits provided a hands-on experience of electronic components and increased curiosity of electronic circuits and their working among freshers. It was an opportunity to gain knowledge and develop circuit building skills.`,
-    },
-    {
-      id: 9,
-      date: '30th November - 03rd December 2023',
-      title: 'Web Dev Bootcamp',
-      img: 'photos/events/web_dev_bootcamp.jpg',
-      content: `The second event of Tuxedo tech-fest, Web Development Bootcamp provides students with hands-on experience in building and designing interactive websites, acquire essential web development skills. 
-By the end of the workshop, students were able to build their own portfolio.`,
-    },
+      date: '19th - 21st December 2025',
+      title: 'Soldering and Etching Workshop',
+      img: '/photos/events/soldering.jpeg',
+      content: `The Electron Devices Society conducted SOLDERING & ETCHING WORKSHOP, one of the flagship events of IEEE-SJCE. A 3-day event that gives students a hands-on experience of Soldering and Etching with theoretical and practical sessions.`,
+    },   
   ]
    useEffect(() => {
      AOS.init({
@@ -103,10 +80,10 @@ By the end of the workshop, students were able to build their own portfolio.`,
         </h1>
         <hr className="hr-1" />
         <VerticalTimeline lineColor={'rgb(147, 169, 187)'}>
-          {pastEvents.map((event) => {
+          {pastEvents.reverse().map((event) => {
             return (
               <>
-                {event.id % 2 === 1 ? (
+                {event.id % 2 === 0 ? (
                   <VerticalTimelineElement
                     key={event.id}
                     className="vertical-timeline-element--work"

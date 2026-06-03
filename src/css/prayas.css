@@ -1,43 +1,164 @@
-.prayas{
+/* Base styling for the Prayas section */
+.prayas {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.section_prayas{
+    padding: 2rem 0;
+    transition: background-color 0.5s ease;
+  }
+  
+  .prayas:hover {
+    background-color: rgba(113, 227, 242, 0.03);
+  }
+  
+  .section_prayas {
     width: 50%;
-}
-.prayas_title{
+    transition: all 0.4s ease-in-out;
     position: relative;
-   text-align: left;
-   font-size: 1.3rem;
-   margin-bottom: -1%;
-   font-weight: 600;
-   display: flex;
-   justify-content: start;
-   text-decoration: none;
-   cursor: pointer;
-}
-.prayas_hr{
+  }
+  
+  .section_prayas:hover {
+    transform: translateX(5px);
+  }
+  
+  .prayas_title {
+    position: relative;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: -1%;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: #e6e9f5;
+  }
+  
+  .prayas_title:hover {
+    color: #71e3f2;
+    transform: scale(1.02);
+  }
+  
+  .prayas_title::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #71e3f2;
+    transition: width 0.4s ease;
+  }
+  
+  .prayas_title:hover::before {
+    width: 100%;
+  }
+  
+  .prayas_hr {
     border: 0;
     height: 1px;
     width: 150%;
-    /* margin-bottom: 5%; */
+    margin: 1rem 0;
     background-image: linear-gradient(
       to right,
       rgba(113, 227, 242, 0.75),
       rgba(0, 0, 0, 0),
       rgba(0, 0, 0, 0)
     );
-}
-
-.prayas_para{
+    transition: width 0.5s ease-out;
+  }
+  
+  .section_prayas:hover .prayas_hr {
+    width: 170%;
+    background-image: linear-gradient(
+      to right,
+      rgba(113, 227, 242, 1),
+      rgba(113, 227, 242, 0.3),
+      rgba(0, 0, 0, 0)
+    );
+  }
+  
+  .prayas_para {
     font-size: 1rem;
-    text-align:left;
+    text-align: left;
     line-height: 1.5;
     color: #b8c0e7;
     display: none;
-}
-.prayas_active_para{
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease, transform 0.6s ease, color 0.3s ease;
+  }
+  
+  .prayas_active_para {
     display: block;
-}   
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease forwards;
+  }
+  
+  .prayas_para:hover {
+    color: #d0d6f5;
+  }
+  
+  /* Animation for paragraph appearance */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .section_prayas {
+      width: 85%;
+    }
+    
+    .prayas_hr {
+      width: 120%;
+    }
+    
+    .section_prayas:hover .prayas_hr {
+      width: 130%;
+    }
+  }
+  
+  /* Additional funky effects */
+  .prayas_title.pulse {
+    animation: titlePulse 1.5s infinite alternate;
+  }
+  
+  @keyframes titlePulse {
+    0% {
+      text-shadow: 0 0 0 rgba(113, 227, 242, 0);
+    }
+    100% {
+      text-shadow: 0 0 10px rgba(113, 227, 242, 0.5);
+    }
+  }
+  
+  /* Staggered reveal for multiple sections */
+  .stagger-reveal {
+    opacity: 0;
+  }
+  
+  .stagger-reveal.revealed {
+    animation: staggerIn 0.8s ease forwards;
+  }
+  
+  @keyframes staggerIn {
+    from {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }

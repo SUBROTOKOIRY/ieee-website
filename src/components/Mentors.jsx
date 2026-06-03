@@ -45,11 +45,19 @@ function Mentors() {
       },
       {
         id: 5,
-        type: 'SBMDC ADVISOR',
-        src: '/photos/members/Shashidhar R.jpg',
+        type: 'SPS ADVISOR',
+        src: '/photos/members/Dr. SHASHIDHAR R.jpg',
         name: 'Dr. SHASHIDHAR R',
         linkedin: 'https://www.linkedin.com/in/shashidhar-r-ph-d-ab6152123/',
         gmail: 'shashidhar.r@sjce.ac.in',
+      },
+       {
+        id: 6,
+        type: 'SBMDC ADVISOR',
+        src: '/photos/members/anitha_prasad.jpg',
+        name: 'Dr. ANITHA PRASAD',
+        linkedin: '',
+        gmail: 'anith.sp@sjce.ac.in',
       },
     ]
   return (
@@ -69,13 +77,13 @@ function Mentors() {
               >
                 <div className="mentors">
                   <div className="pic">
-                    <img src={data.src} />
+                    <img src={data.src} alt={data.name || "mentor"} />
                     <ul className="social">
                       <li>
                         <a
                           href={`mailto:${data.gmail}`}
                           className="fa fa-envelope"
-                          aria-hidden="true"
+                          aria-label="Send email"
                         ></a>
                       </li>
                       {/* <li>
@@ -85,7 +93,7 @@ function Mentors() {
                         <a href="#" className="fab fa-google-plus"></a>
                       </li> */}
                       <li>
-                        <a href={data.linkedin} className="fab fa-linkedin"></a>
+                        <a href={data.linkedin} className="fab fa-linkedin" aria-label="LinkedIn profile"></a>
                       </li>
                     </ul>
                   </div>

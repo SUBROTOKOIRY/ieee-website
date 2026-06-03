@@ -1,49 +1,127 @@
-@media (min-width:750px) {
-  .event_img{
+/* Base styling for both screen sizes */
+.event_img {
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  border-color: #0095da;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 5px 15px rgba(0, 149, 218, 0.3);
+  transform: translateZ(0); /* hardware acceleration */
+}
+
+.event_img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 8px 25px rgba(0, 149, 218, 0.5);
+  border-color: #00b8ff;
+}
+
+.vertical-timeline-element-content {
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.vertical-timeline-element-content:hover {
+  background-color: rgba(0, 149, 218, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.vertical-timeline-element-date {
+  transition: color 0.3s, transform 0.3s;
+  font-weight: 600;
+}
+
+/* Screen-specific styling */
+@media (min-width: 750px) {
+  .event_img {
     width: 150px;
     height: 150px;
-    object-fit:cover;
-    border-radius: 50%;
-    position: relative;
     bottom: 80%;
-    left: -80%; 
-    border: 5px solid #0095da;
-}
-.vertical-timeline-element-content .vertical-timeline-element-date  {
-    color:rgb(180, 227, 255);  
-    font-weight: 600;
+    left: -80%;
+    border-width: 5px;
+    filter: saturate(1.2);
+  }
+  
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    color: rgb(180, 227, 255);
     padding-left: 30%;
     padding-right: 30%;
-}
-.past_events_bigscreen{
+  }
+  
+  .vertical-timeline-element-content:hover .vertical-timeline-element-date {
+    color: #ffffff;
+    transform: translateX(5px);
+  }
+  
+  .past_events_bigscreen {
     visibility: visible;
     opacity: 1;
+    transition: opacity 0.5s ease-in-out;
   }
-  .past_events_smallscreen
-  {
+  
+  .past_events_smallscreen {
     display: none;
     opacity: 0;
   }
 }
 
-@media (max-width: 750px) {
-  .past_events_smallscreen{
+@media (max-width: 749px) {
+  .event_img {
+    width: 65px;
+    height: 65px;
+    bottom: 20%;
+    left: -25%;
+    border-width: 2px;
+  }
+  
+  .past_events_smallscreen {
     visibility: visible;
     opacity: 1;
+    animation: fadeIn 0.5s ease-in-out;
   }
-  .past_events_bigscreen
-  {
+  
+  .past_events_bigscreen {
     display: none;
     opacity: 0;
   }
-  .event_img{
-    width: 65px;
-    height: 65px;
-    object-fit:cover;
-    border-radius: 50%;
-    position: relative;
-    bottom: 20%;
-    left: -25%; 
-    border: 2px solid #0095da;
+  
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: rgb(160, 217, 255);
+  }
 }
+
+/* Cool animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Add these classes to elements you want to animate */
+.animate-in {
+  animation: fadeIn 0.8s forwards;
+}
+
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+
+/* Additional funky effects for your timeline */
+.vertical-timeline-element {
+  transition: transform 0.3s ease;
+}
+
+.vertical-timeline-element:hover {
+  transform: translateY(-5px);
+}
+
+/* Add gradient backgrounds for more visual appeal */
+.funky-gradient {
+  background: linear-gradient(135deg, rgba(0, 149, 218, 0.1) 0%, rgba(0, 212, 255, 0.2) 100%);
+  border-radius: 8px;
 }

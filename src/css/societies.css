@@ -1,222 +1,306 @@
-.societies_p{
-    font-family: sans-serif;
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #1c2841, #283747);
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Main container */
+.societies-container {
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Society Section Card */
+.society-section {
+  margin: 4rem 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(50, 107, 160, 0.1), rgba(173, 156, 255, 0.05));
+  border: 2px solid rgba(173, 156, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.society-section:hover {
+  border-color: rgba(173, 156, 255, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Society Header */
+.society-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 3rem;
+  border-bottom: 2px solid rgba(173, 156, 255, 0.2);
+}
+
+.society-header-content h2 {
+  font-size: 2.5rem;
+  color: #a994ee;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: 0 0 10px rgba(173, 156, 255, 0.3);
+}
+
+.society-header-content p {
+  color: #b8c0e7;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.society-animation {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Events Container */
+.events-container {
+  padding: 2rem 3rem;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Event Card */
+.event-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(173, 156, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(173, 156, 255, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.event-card h3 {
+  color: #4ec4f7;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.event-card p {
+  color: #b8c0e7;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.event-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Societies Paragraph - Updated */
+.societies_p {
+    font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
     color: #b8c0e7;
     text-align: justify;
     font-size: 1.1rem;
-    padding-top: 1%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-bottom: 2%;
+    padding: 2% 4%;
     line-height: 1.8rem;
-    letter-spacing: .08rem;
+    letter-spacing: 0.08rem;
     position: relative;
-
+    transition: all 0.5s ease;
+    background: transparent;
+    border-radius: 8px;
 }
 
-.societies_subheading{
-    font-family: 'Fira Sans', sans-serif;
+/* Subheadings */
+.societies_subheading, .societies_small_subheading {
+    font-family: 'Montserrat', sans-serif;
     color: #a994ee;
-    font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: .18rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
     position: relative;
-    padding-left: 8%;
-    /* margin: 0px; */
-    margin-top: 3%;
-}
-.societies_small_subheading{
-    font-family: 'Fira Sans', sans-serif;
-    color: #a994ee;
+    padding-left: 0;
+    margin-top: 1.5rem;
+    transition: color 0.3s ease;
     font-size: 1.3rem;
+}
+
+.societies_subheading:hover, .societies_small_subheading:hover {
+    color: #ceb9f9;
+    text-shadow: 0 0 10px rgba(173, 156, 255, 0.5);
+}
+
+.societies_small_subheading {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #a994ee;
+    font-size: 1.3rem;
+    margin-top: 1%;
+}
+
+/* Society Sections */
+.women_eng, .robotics, .std_branch, .elect_society {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 7% 0 4% 0;
+    font-family: 'Raleway', sans-serif;
+    color: #0095DA;
+    font-size: 1.8rem; /* Slightly larger */
     font-weight: 500;
-    letter-spacing: .18rem;
-    position: relative;
-    padding-left: 8%;
-    margin: 0px;
-}
-.women_eng{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 7%;
-    margin-bottom: 4%;
-
-    font-family: 'Fira Sans', sans-serif;
-    color: #0095DA;
-    font-size: 1.7rem;
-    font-weight: 400;
-    letter-spacing: .18rem;
-}
-.robotics{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 7%;
-    margin-bottom: 4%;
-
-    font-family: 'Fira Sans', sans-serif;
-    color: #0095DA;
-    font-size: 1.7rem;
-    font-weight: 400;
-    letter-spacing: .18rem;
-}
-.std_branch{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 7%;
-    margin-bottom: 4%;
-
-    font-family: 'Fira Sans', sans-serif;
-    color: #0095DA;
-    font-size: 1.7rem;
-    font-weight: 400;
-    letter-spacing: .18rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.elect_society{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 7%;
-    margin-bottom: 4%;
-
-    font-family: 'Fira Sans', sans-serif;
-    color: #0095DA;
-    font-size: 1.7rem;
-    font-weight: 400;
-    letter-spacing: .18rem;
+.women_eng:hover, .robotics:hover, .std_branch:hover, .elect_society:hover {
+    color: #4ec4f7; /* Brighter hover color */
+    transform: scale(1.05); /* Slight scale on hover */
+    text-shadow: 0 0 10px rgba(0, 149, 218, 0.7); /* Glowing text shadow */
 }
-.img1{
-    float: left;
+
+/* Images */
+.img1, .img2, .img3, .img4, .img5, .img6, .img7 {
+    border-radius: 12px;
+    border: none;
+    margin: 2%;
+    object-fit: cover;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.img1:hover, .img2:hover, .img3:hover, .img4:hover, .img5:hover, .img6:hover, .img7:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.img1, .img5 {
     width: 18rem;
     height: 20rem;
-    border: none;
-    margin-right: 2%;
-}
-.img2{
-    float: right;
-    width: 25rem;
-    height: 18rem;
-    border-radius: 10%;
-    border: none;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    object-fit: cover;
+    float: left;
 }
 
-.img3{
-   float: right;
+.img2, .img3, .img6, .img7 {
     width: 25rem;
     height: 18rem;
-    border-radius: 10%;
-    border: none;
-    margin-left: 2%;
-    margin-: 2%;
-    object-fit: cover;      
+    float: right;
 }
-.img4{
-    float: left;
+
+.img4 {
     width: 20rem;
     height: 15rem;
-    /* margin: .7rem; */
-    border-radius: 10%;
-    border: none;
-    margin-bottom: 0%;
-    margin-top: 0%;
-    object-fit: cover;
-    padding:  0px 15px;
-}
-
-.img5{
     float: left;
-    width: 18rem;
-    height: 20rem;
-    border: none;
-    margin-right: 2%;
-}
-.img6{
-    float: right;
-    width: 25rem;
-    height: 15rem;
-    border-radius: 10%;
-    border: none;
-    margin-left: 2%;
-    margin-bottom: 2%;
-    object-fit: cover;
+    padding: 0 15px;
 }
 
-.img7{
-    float: right;
-    width: 25rem;
-    height: 18rem;
-    border-radius: 10%;
-    border: none;
-    margin-left: 2%;
-    padding-bottom: 2%;
-    object-fit: cover;
-}
+/* Text Animation */
 .ml12 {
-  font-weight: 200;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  letter-spacing: 0.5em;
+    font-weight: 200;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    display: inline-block; /* Essential for animation */
 }
 
 .ml12 .letter {
-  display: inline-block;
-  line-height: 1em;
-}   
- @media screen and (max-width: 750px){
-    .societies_p{
-    
-        display: flex;
+    display: inline-block;
+    line-height: 1em;
+    animation: fadeInUp 1s ease-out forwards; /* Apply animation */
+    opacity: 0; /* Start invisible */
+}
+
+/* Keyframes for Animation */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .society-header {
+      grid-template-columns: 1fr;
+      padding: 2rem;
+      gap: 1.5rem;
+    }
+
+    .society-header-content h2 {
+      font-size: 1.8rem;
+    }
+
+    .society-animation {
+      height: 200px;
+    }
+
+    .events-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .event-card {
+      padding: 1.5rem;
+    }
+
+    .society-section {
+      margin: 2rem 1rem;
+    }
+
+    .societies_p {
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        padding: 2% 2%;
     }
-    .img1{
-        width:18rem;
-        height: 15rem;
-        margin:8% 0%;
+
+    .img1, .img2, .img3, .img4, .img5, .img6, .img7 {
+        width: 90%;
+        height: auto;
+        margin: 5% 0;
         float: none;
     }
-    .img2{
-        width:19rem;
-        height: 15rem;
-        margin:8% 0%;
-        float: none;
-    }
-    .img3{
-        width:19rem;
-        height: 15rem;
-        margin:8% 0%;
-        float: none;
-    }
-    .img4{
-        width:17rem;
-        height: 13rem;
-        margin:8% 0%;
-        float: none;
-    }
-    .img5{
-        width:18rem;
-        height: 15rem;
-        margin:8% 0%;
-        float: none;
-    }
-    .img6{
-        width:19rem;
-        height: 15rem;
-        margin:8% 0%;
-        float: none;
-    }
-    .img7{
-        width:19rem;
-        height: 15rem;
-        margin:8% 0%;
-        float: none;
-        padding: auto;
-    }
+}
+
+@media screen and (max-width: 480px) {
+  .society-header-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .society-header-content p {
+    font-size: 0.9rem;
+  }
+
+  .event-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .event-card p {
+    font-size: 0.85rem;
+  }
 }

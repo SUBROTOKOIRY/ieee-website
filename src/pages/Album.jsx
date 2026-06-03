@@ -1,7 +1,6 @@
-import React, { useState, useCallback,useEffect } from 'react'
-import { render } from 'react-dom'
-import Gallery from 'react-photo-gallery'
-import Carousel, { Modal, ModalGateway } from 'react-images'
+import React, { useEffect } from 'react'
+import { PhotoProvider, PhotoView } from 'react-photo-view'
+import 'react-photo-view/dist/react-photo-view.css'
 import { photos } from '../components/photos.js'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -10,25 +9,14 @@ import '../css/photos.css'
 import VideoThumbnail from '../components/VideoThumbnail'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
 function Album() {
-    useEffect(() => {
-      AOS.init({
-        duration: 1000, // Set the duration of the animation
-        once: true, // Only animate once
-      })
-    }, [])
-  const [currentImage, setCurrentImage] = useState(0)
-  const [viewerIsOpen, setViewerIsOpen] = useState(false)
-
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index)
-    setViewerIsOpen(true)
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the duration of the animation
+      once: true, // Only animate once
+    })
   }, [])
-
-  const closeLightbox = () => {
-    setCurrentImage(0)
-    setViewerIsOpen(false)
-  }
 
   return (
     <div>
@@ -38,31 +26,31 @@ function Album() {
       </h1>
       <hr className="hr-1" />
       <Caraousel />
-      <Gallery
-        className="album"
-        margin={8}
-        photos={photos}
-        onClick={openLightbox}
-      />
-      <ModalGateway>
-        {viewerIsOpen ? (
-          <Modal onClose={closeLightbox}>
-            <Carousel
-              currentIndex={currentImage}
-              views={photos.map((x) => ({
-                ...x,
-                srcset: x.src,
-                height: x.height,
-              }))}
-            />
-          </Modal>
-        ) : null}
-      </ModalGateway>
+      <div className="album">
+        <PhotoProvider>
+          {photos.map((photo, index) => (
+            <div key={index} className="photo-wrapper">
+              <PhotoView src={photo.src}>
+                <img
+                  src={photo.src}
+                  alt="Gallery"
+                  style={{
+                    width: '100%',
+                    height: '250px',
+                    objectFit: 'cover',
+                    cursor: 'pointer',
+                    borderRadius: '8px',
+                  }}
+                />
+              </PhotoView>
+            </div>
+          ))}
+        </PhotoProvider>
+      </div>
       <VideoThumbnail />
       <Footer />
     </div>
   )
 }
-//render(<App />, document.getElementById('app'))
 
 export default Album
